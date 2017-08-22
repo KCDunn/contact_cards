@@ -1,0 +1,47 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+  #body{
+    width: 100%;
+    background-color: #663333;
+  }
+  #section1{
+    width: 290px;
+    height: 190px;
+    background-color: #333355;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 5px 5px 10px;
+  }
+  #section2{
+    width: 790px;
+    background-color: #333355; 
+    display: inline-block;
+    vertical-align: top;
+  }
+  .cards{
+    width: 230px;
+    height: 100px; 
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    background-color: white;
+    color: #333355;
+    margin: 15px;
+  }
+  .cards p{
+    margin-top: 10px;
+  }
+  .cards .carddescr{
+    display: none;
+  }
+  button{
+    display: block;
+    vertical-align: bottom;
+    background-color: #bb3333;
+    color: white;
+    margin-top: 50px;
+  }

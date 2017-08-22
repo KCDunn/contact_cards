@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact Card</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+  $( "form" )
+    .submit(function() {
+      var cards = "";
+      cards += `<div class="cards"><p class="cardname">
+              ${$('#1').val()}
+              ${$('#2').val()} 
+              </p>
+              <p class="carddescr">
+              ${$('#3').val()}
+              </p><Button class="clicket">Click for Description</button>
+              </div>`
+
+      $('#section2').append(cards);
+      return false
+    })
+ 
+    $(document).on('click', '.clicket', function(){
+      $(this).siblings().toggle()
+      ('.clicket').hide()
+    });
+  });
+</script>
+</head>
+<body>
+<div id="section1">
+  <form action="process.php" method="post">
+    First name:
+    <input id="1" type="text" name="firstname" value="First Name">
+    <br>
+    Last name:
+    <input id="2" type="text" name="lastname" value="Last Name">
+    <br>
+    Description: 
+    <input id="3" type="text" name="description" value="Enter description">
+    <br>
+    <input type="submit" value="Add User">
+  </form>
+</div>
+<div id="section2">
+</div>   
+</body>
+</html>
